@@ -68,45 +68,46 @@ class ViewController: UIViewController {
     func setGameOver(message:String){
         winnerLbl.text = message
         gameOver = true
-        UIView.animate(withDuration: 2){
+        UIView.animate(withDuration: 1){
             self.playAgainBtn.alpha = 1
         }
 
     }
     
     @IBAction func btnPressed(_ sender: UIButton) {
-        if !noughtTags.contains(sender.tag) && !crossTags.contains(sender.tag) && !gameOver{
-            if crossTurn {
-                crossTurn = false
-                crossTags.append(sender.tag)
-                sender.setImage(UIImage(named: "cross.png"), for: [])
-                growClick(sender: sender)
-                crossTags.sort()
-                for array in boardWins {
-                    if array == crossTags{
-                        setGameOver(message: "Cross wins")
-                        break
+        if !gameOver{
+            if !noughtTags.contains(sender.tag) && !crossTags.contains(sender.tag) {
+                if crossTurn {
+                    crossTurn = false
+                    crossTags.append(sender.tag)
+                    sender.setImage(UIImage(named: "cross.png"), for: [])
+                    //growClick(sender: sender)
+                    crossTags.sort()
+                    for array in boardWins {
+                        if crossTags.contains(array[0]) && crossTags.contains(array[1]) && crossTags.contains(array[2]){
+                            setGameOver(message: "Cross wins")
+                            break
+                        }
                     }
-                }
-            } else {
-                crossTurn = true
-                noughtTags.append(sender.tag)
-                
-                sender.setImage(UIImage(named: "nought.png"), for: [])
-                slideInClick(sender: sender)
-                noughtTags.sort()
-                for array in boardWins {
-                    if array == noughtTags{
-                        setGameOver(message:"Nought wins")
-                        break
+                } else {
+                    crossTurn = true
+                    noughtTags.append(sender.tag)
+                    sender.setImage(UIImage(named: "nought.png"), for: [])
+                    //slideInClick(sender: sender)
+                    noughtTags.sort()
+                    for array in boardWins {
+                        if noughtTags.contains(array[0]) && noughtTags.contains(array[1]) && noughtTags.contains(array[2]) {
+                            setGameOver(message:"Nought wins")
+                            break
+                        }
                     }
                 }
             }
-             
             if noughtTags.count + crossTags.count == 9 && !gameOver{
                 setGameOver(message:"No winner")
             }
         }
+
         
         
         
