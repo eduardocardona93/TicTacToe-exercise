@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var winnerLbl: UILabel!
     @IBOutlet weak var playAgainBtn: UIButton!
     
+    @IBOutlet weak var boardImg: UIImageView!
     //Row 1
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        slideInClick()
         setStartGame()
         // Do any additional setup after loading the view.
     }
@@ -81,8 +83,7 @@ class ViewController: UIViewController {
                     crossTurn = false
                     crossTags.append(sender.tag)
                     sender.setImage(UIImage(named: "cross.png"), for: [])
-                    //growClick(sender: sender)
-                    crossTags.sort()
+                    growClick(sender: sender)
                     for array in boardWins {
                         if crossTags.contains(array[0]) && crossTags.contains(array[1]) && crossTags.contains(array[2]){
                             setGameOver(message: "Cross wins")
@@ -93,8 +94,7 @@ class ViewController: UIViewController {
                     crossTurn = true
                     noughtTags.append(sender.tag)
                     sender.setImage(UIImage(named: "nought.png"), for: [])
-                    //slideInClick(sender: sender)
-                    noughtTags.sort()
+                    growClick(sender: sender)
                     for array in boardWins {
                         if noughtTags.contains(array[0]) && noughtTags.contains(array[1]) && noughtTags.contains(array[2]) {
                             setGameOver(message:"Nought wins")
@@ -125,10 +125,13 @@ class ViewController: UIViewController {
             sender.frame = CGRect(x: x, y: y, width: width, height: height)
         }
     }
-    func slideInClick(sender: UIButton) {
-        sender.center = CGPoint(x: sender.center.x - 30, y: sender.center.y)
-        UIView.animate(withDuration: 1){
-            sender.center = CGPoint(x: sender.center.x + 30, y: sender.center.y)
+    func slideInClick() {
+        gameOver = true
+        boardImg.center = CGPoint(x: boardImg.center.x - 100, y: boardImg.center.y)
+        UIView.animate(withDuration: 3){
+            
+            self.boardImg.center = CGPoint(x: self.boardImg.center.x + 100, y: self.boardImg.center.y)
+            self.gameOver = false
             
         }
     }
