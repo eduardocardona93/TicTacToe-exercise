@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q2o-te-CwK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q2o-te-CwK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="RoO-p4-1sB">
             <objects>
-                <viewController id="q2o-te-CwK" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q2o-te-CwK" customClass="ViewController" customModule="TicTacToe_template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OuD-me-M3Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,23 +28,20 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z80-Qx-Enp">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="e16-va-W6j"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="0EM-nn-rat"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25b-iv-cRG">
                                                 <rect key="frame" x="139.5" y="0.0" width="115" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="zbr-av-url"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="uoS-yX-EK9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQy-eF-Qif">
                                                 <rect key="frame" x="279.5" y="0.0" width="114.5" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="wKQ-M0-fBb"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="BmQ-fU-lV3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -52,23 +51,20 @@
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="834-HI-gwF">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="161"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="sLd-7y-3kL"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="e05-Y8-KAc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyS-no-ZbB">
                                                 <rect key="frame" x="139.5" y="0.0" width="115" height="161"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="aRx-81-kWA"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="LbD-PO-CzU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-vk-TYm">
                                                 <rect key="frame" x="279.5" y="0.0" width="114.5" height="161"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="vtk-kh-4hw"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="HHw-nc-PTw"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -78,23 +74,20 @@
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIy-6r-bwW">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="qMG-lo-43y"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="8sm-gX-lhT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fB9-ga-hHg">
                                                 <rect key="frame" x="139.5" y="0.0" width="115" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="kEA-cn-q4g"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="hmj-jT-RLI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-wf-0HI">
                                                 <rect key="frame" x="279.5" y="0.0" width="114.5" height="161.5"/>
-                                                <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="129-dL-HD5"/>
+                                                    <action selector="btnPressed:" destination="q2o-te-CwK" eventType="touchUpInside" id="Zxm-go-z7T"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -104,19 +97,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-fk-chj">
                                 <rect key="frame" x="50" y="125" width="314" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kll-w1-C07">
-                                <rect key="frame" x="117.5" y="418" width="179" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kll-w1-C07">
+                                <rect key="frame" x="117" y="418" width="180" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
-                                    <action selector="playAgain:" destination="q2o-te-CwK" eventType="touchUpInside" id="UPm-Aw-6Q9"/>
+                                    <action selector="playAgainBtn:" destination="q2o-te-CwK" eventType="touchUpInside" id="bPP-Pc-saC"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4VE-66-j3t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fWQ-mn-oAF" firstAttribute="top" secondItem="4VE-66-j3t" secondAttribute="top" constant="150" id="1xl-EM-Qy3"/>
                             <constraint firstItem="hk8-ll-2qa" firstAttribute="top" secondItem="fWQ-mn-oAF" secondAttribute="top" id="6QB-sB-tbX"/>
@@ -132,11 +126,19 @@
                             <constraint firstItem="ejm-fk-chj" firstAttribute="leading" secondItem="4VE-66-j3t" secondAttribute="leading" constant="50" id="qFH-W8-crI"/>
                             <constraint firstItem="4VE-66-j3t" firstAttribute="trailing" secondItem="ejm-fk-chj" secondAttribute="trailing" constant="50" id="wbP-or-u5w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4VE-66-j3t"/>
                     </view>
                     <connections>
-                        <outlet property="btnPlayAgain" destination="kll-w1-C07" id="Chx-GX-SdZ"/>
-                        <outlet property="resultLabel" destination="ejm-fk-chj" id="WWj-xe-FTv"/>
+                        <outlet property="btn1" destination="Z80-Qx-Enp" id="sEy-Sd-vma"/>
+                        <outlet property="btn2" destination="25b-iv-cRG" id="455-gD-DxA"/>
+                        <outlet property="btn3" destination="BQy-eF-Qif" id="2y5-OG-1Zl"/>
+                        <outlet property="btn4" destination="834-HI-gwF" id="YIi-w6-ria"/>
+                        <outlet property="btn5" destination="WyS-no-ZbB" id="ZfM-D1-BKz"/>
+                        <outlet property="btn6" destination="XUa-vk-TYm" id="PFk-95-e5t"/>
+                        <outlet property="btn7" destination="KIy-6r-bwW" id="Hd1-10-eUG"/>
+                        <outlet property="btn8" destination="fB9-ga-hHg" id="BjN-ZJ-s0Q"/>
+                        <outlet property="btn9" destination="eg0-wf-0HI" id="nwY-iv-3eQ"/>
+                        <outlet property="playAgainBtn" destination="kll-w1-C07" id="coH-Vh-mJj"/>
+                        <outlet property="winnerLbl" destination="ejm-fk-chj" id="C6R-TR-pgH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbF-aQ-ifu" sceneMemberID="firstResponder"/>
@@ -146,5 +148,11 @@
     </scenes>
     <resources>
         <image name="board.png" width="744" height="783"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
