@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 1){
             self.playAgainBtn.alpha = 1
         }
+        fromCenter(sender: playAgainBtn)
 
     }
     
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
                     crossTurn = false
                     crossTags.append(sender.tag)
                     sender.setImage(UIImage(named: "cross.png"), for: [])
-                    growClick(sender: sender)
+                    slideFromTop(sender: sender)
                     for array in boardWins {
                         if crossTags.contains(array[0]) && crossTags.contains(array[1]) && crossTags.contains(array[2]){
                             setGameOver(message: "Cross wins")
@@ -94,7 +95,7 @@ class ViewController: UIViewController {
                     crossTurn = true
                     noughtTags.append(sender.tag)
                     sender.setImage(UIImage(named: "nought.png"), for: [])
-                    growClick(sender: sender)
+                    rotate(sender: sender)
                     for array in boardWins {
                         if noughtTags.contains(array[0]) && noughtTags.contains(array[1]) && noughtTags.contains(array[2]) {
                             setGameOver(message:"Nought wins")
@@ -112,7 +113,26 @@ class ViewController: UIViewController {
         
         
     }
-    
+    func slideFromTop(sender: UIButton){
+        sender.transform = CGAffineTransform(translationX: 0, y: -100)
+        UIView.animate(withDuration: 1){
+            sender.transform = CGAffineTransform.identity
+        }
+    }
+    func rotate(sender: UIButton){
+        UIView.animate(withDuration: 2){
+            sender.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+    }
+    func fromCenter(sender: UIButton){
+        UIView.animate(withDuration: 1){
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        } completion: { _ in
+            UIView.animate(withDuration: 2){
+                sender.transform = CGAffineTransform.identity
+            }
+        }
+    }
     func growClick(sender: UIButton) {
         let width = sender.frame.size.width
         let height = sender.frame.size.height
